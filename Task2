@@ -1,0 +1,96 @@
+import java.util.*;
+
+public class SGT
+{
+
+    public static int Grade(int marks)
+    {
+        if(marks >= 90)
+        {
+            System.out.println("Grade: O");
+            return 10;
+        }
+
+        else if(marks>=80)
+        {
+            System.out.println("Grade: E");
+            return 9;
+        }
+
+        else if(marks>=70)
+        {
+            System.out.println("Grade: A");
+            return 8;
+        }
+
+        else if(marks>=60)
+        {
+            System.out.println("Grade: B");
+            return 7;
+        }
+
+        else if(marks>=50)
+        {
+            System.out.println("Grade: C");
+            return 6;
+        }
+
+        else if(marks>=40)
+        {
+            System.out.println("Grade: D");
+            return 5;
+        }
+
+        else
+        {
+            System.out.println("Grade: F");
+            return 0;
+        }
+    }
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the Student name: ");
+        String name = sc.nextLine();
+
+        System.out.print("Enter the marks of Data Structure and Algorithms: ");
+        int dsa = sc.nextInt();
+        System.out.print("Enter the marks of Object Oriented Programming: ");
+        int oop = sc.nextInt();
+        System.out.print("Enter the marks of Operating System: ");
+        int os = sc.nextInt();
+        System.out.print("Enter the marks of Software Engineering: ");
+        int se = sc.nextInt();
+        System.out.print("Enter the marks of Computer Networks: ");
+        int cn = sc.nextInt();
+        System.out.print("Enter the marks of Discrete Mathematics: ");
+        int dm = sc.nextInt();
+
+        int avg = (dsa + oop + os + se + cn + dm)/6;
+
+        System.out.println("\nName of the Student: " + name);
+
+        System.out.print("Marks in DSA: " + dsa + "\t");
+        int dsax = Grade(dsa);
+        System.out.print("Marks in OOP: " + oop + "\t");
+        int oopx = Grade(oop);
+        System.out.print("Marks in OS: " + os + "\t");
+        int osx = Grade(os);
+        System.out.print("Marks in SE: " + se + "\t");
+        int sex = Grade(se);
+        System.out.print("Marks in CN: " + cn + "\t");
+        int cnx = Grade(cn);
+        System.out.print("Marks in DM: " + dm + "\t");
+        int dmx = Grade(dm);
+
+
+        float gpa = ((float) ((dsax * 4) + (oopx * 3) + (osx * 3) + (sex * 4) + (cnx * 3) + (dmx * 4)) /21);
+
+        System.out.print("Average marks: " + avg + "\t");
+        Grade(avg);
+        System.out.print("GPA: " + gpa + "\t");
+        Grade((int)gpa*10);
+    }
+}
