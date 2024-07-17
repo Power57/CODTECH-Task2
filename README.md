@@ -10,6 +10,11 @@
 
 ### Project: STUDENT GRADE TRACKER
 
+<img width="959" alt="Student Grade Tracker" src="https://github.com/user-attachments/assets/8550c0bf-ec73-4890-9b41-39610ee58eae">
+
+
+
+
 ### Objective
 The objective of this project is to create a Student Grade Tracker using Java.It should allow the user to input grades for different subjects or assignments, calculate the average grade, and display the overall grade along with any additional information (such as letter grade or GPA).
 
